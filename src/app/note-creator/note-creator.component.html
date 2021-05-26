@@ -1,0 +1,23 @@
+<div class="form">
+  <input
+    required
+    type="text"
+    placeholder="Введите название..."
+    [formControl]="title"
+  >
+  <br>
+  <textarea
+    required
+    name="text"
+    cols="30"
+    rows="10"
+    placeholder="Введите текст записи..."
+    [formControl]="text"
+  ></textarea>
+
+  <div class="buttons">
+    <button routerLink="/blog">Отменить</button>
+    <button (click)="submit()">Сохранить</button>
+  </div>
+
+</div>

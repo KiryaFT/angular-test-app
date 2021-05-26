@@ -1,18 +1,28 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {ReactiveFormsModule, FormsModule} from '@angular/forms';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import {AppComponent} from './app.component';
+import {AppRoutingModule} from './app-routing.module';
+import {NoteListComponent} from './note-list/note-list.component';
+import {NoteCreatorComponent} from './note-creator/note-creator.component';
+import {NoteDetailsComponent} from './note-details/note-details.component';
+import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NoteListComponent,
+    NoteCreatorComponent,
+    NoteDetailsComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     AppRoutingModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

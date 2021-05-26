@@ -1,0 +1,22 @@
+<h1>Блог</h1>
+
+<div class="notes" *ngIf="notes.length; else noNotes">
+  <div class="note" *ngFor="let note of notes">
+
+    <h2>{{ note.title }}</h2>
+    <p>{{ note.text }}</p>
+    <button [routerLink]="['/blog', note.id]">
+      Посмотреть
+    </button>
+
+  </div>
+</div>
+
+<button
+  routerLink="/note-creator"
+  class="add-btn"
+>Добавить
+</button>
+
+<ng-template #noNotes>Нет записей</ng-template>
+

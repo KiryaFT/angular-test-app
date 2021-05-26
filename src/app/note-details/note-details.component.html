@@ -1,0 +1,29 @@
+<button routerLink="/blog">Назад</button>
+
+<h1>Запись {{ note.title }}</h1>
+
+<div class="form">
+  <input
+    type="text"
+    [ngModel]="note.title"
+    [formControl]="title"
+  >
+
+  <textarea
+    name="text"
+    cols="30"
+    rows="10"
+    [ngModel]="note.text"
+    [formControl]="text"
+  ></textarea>
+</div>
+
+<div class="buttons">
+  <button
+    class="delete-btn"
+    (click)="confirmDelete()"
+  >Удалить
+  </button>
+
+  <button (click)="saveChanges()">Сохранить</button>
+</div>
